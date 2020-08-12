@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block sub_content %}
+<h1>Home</h1>
+	{% if thoughts %}
+		{% for thought in thoughts %}
+		<h3><a href="/thoughts/{{thought['thought_id']}}">{{thought['title']}}
+		</a></h3>
+		<h5>by - {{thought['mastermind']}}</h5>
+
+		<hr>
+		{% endfor %}
+	{% else %}
+		<h3>No blogs have been written yet</h3>
+	{% endif %}
+{% endblock %}

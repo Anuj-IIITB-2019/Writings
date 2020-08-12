@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block sub_content %}
+<div>
+	<h1>Write Thought</h1>	
+</div>
+<form class="form-horizontal" method="POST">
+	
+	{# Title #}
+		<div class="form-group">
+			<label class="control-label col-sm-2">Title</label>
+			<div class="col-sm-5">
+				<input type="text" name="title">
+			</div>
+		</div>
+
+	{# Body #}
+		<div class="form-group">
+			<label class="control-label col-sm-2">Body</label>
+			<div class="col-sm-5">
+				<textarea  name="body" class="ckeditor"></textarea>
+			</div>
+		</div>
+
+	{# submit thought #}
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="Submit">Submit</button>
+		</div>
+	</div>
+
+</form>
+{% endblock %}

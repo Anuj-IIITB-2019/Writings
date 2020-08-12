@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block sub_content %}
+<div class="container text-center">
+<h1>{{thoughts['title']|safe}}</h1>
+</div>
+<hr>
+<div class="container">
+	<p>{{thoughts['body']|safe}}</p>
+</div>
+<div class="container">
+	<p>{{thoughts['mastermind']|safe}}</p>
+</div>
+
+{% endblock %}
